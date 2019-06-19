@@ -1,4 +1,4 @@
-{% set version = '2016.8-1' %}
+{% set version = '2016.8-1.1' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: numDeriv_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/numDeriv_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/numDeriv/numDeriv_{{ version }}.tar.gz
-  sha256: 1b681d273697dc780a3ac5bedabb4a257785732d9ca4ef68e4e4aac8b328d11e
+  sha256: d8c4d19ff9aeb31b0c628bd4a16378e51c1c9a3813b525469a31fe89af00b345
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
-  number: 1001
+  number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -44,14 +43,25 @@ about:
     than ''Richardson''''s'' extrapolation and provides a  useful cross-check.  Methods
     are provided for real scalar and vector valued functions. '
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-2'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
+    - conda-forge/r
+
+# Package: numDeriv
+# Version: 2016.8-1.1
+# Title: Accurate Numerical Derivatives
+# Description: Methods for calculating (usually) accurate numerical first and second order derivatives. Accurate calculations  are done using 'Richardson''s' extrapolation or, when applicable, a complex step derivative is available. A simple difference  method is also provided. Simple difference is (usually) less accurate but is much quicker than 'Richardson''s' extrapolation and provides a  useful cross-check.  Methods are provided for real scalar and vector valued functions.
+# Depends: R (>= 2.11.1)
+# LazyLoad: yes
+# ByteCompile: yes
+# License: GPL-2
+# Copyright: 2006-2011, Bank of Canada. 2012-2016, Paul Gilbert
+# Author: Paul Gilbert and Ravi Varadhan
+# Maintainer: Paul Gilbert <pgilbert.ttv9z@ncf.ca>
+# URL: http://optimizer.r-forge.r-project.org/
+# NeedsCompilation: no
+# Packaged: 2019-06-04 11:04:44 UTC; hornik
+# Repository: CRAN
+# Date/Publication: 2019-06-06 09:51:09 UTC
