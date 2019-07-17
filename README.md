@@ -18,7 +18,7 @@ Current build status
 <table><tr><td>All platforms:</td>
     <td>
       <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1404&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-numDeriv-feedstock?branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-numderiv-feedstock?branchName=master">
       </a>
     </td>
   </tr>
