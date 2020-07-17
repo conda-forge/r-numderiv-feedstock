@@ -3,9 +3,9 @@ About r-numderiv
 
 Home: http://optimizer.r-forge.r-project.org/
 
-Package license: GPL-2
+Package license: GPL-2.0-only
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Methods for calculating (usually) accurate numerical first and second order derivatives. Accurate calculations  are done using 'Richardson''s' extrapolation or, when applicable, a complex step derivative is available. A simple difference  method is also provided. Simple difference is (usually) less accurate but is much quicker than 'Richardson''s' extrapolation and provides a  useful cross-check.  Methods are provided for real scalar and vector valued functions. 
 
