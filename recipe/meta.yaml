@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 2
+  number: 3
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -35,7 +35,7 @@ test:
 
 about:
   home: http://optimizer.r-forge.r-project.org/
-  license: GPL-2
+  license: GPL-2.0-only
   summary: 'Methods for calculating (usually) accurate numerical first and second order derivatives.
     Accurate calculations  are done using ''Richardson''''s'' extrapolation or, when
     applicable, a complex step derivative is available. A simple difference  method
